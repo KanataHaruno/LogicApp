@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
 
                 // Give feedback and reset the operand
                 feedback();
+
+                // Reset the input to blanks
+                resetEntry();
             }
         });
 
@@ -180,6 +183,13 @@ public class MainActivity extends AppCompatActivity {
         else if (!answer) Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show();
 
         changeOperand();
+    }
+
+    private void resetEntry(){
+        firstEntry.setText("");
+        secondEntry.setText("");
+        thirdEntry.setText("");
+        fourthEntry.setText("");
     }
 
 }
